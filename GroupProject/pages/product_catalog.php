@@ -52,11 +52,12 @@
         $rs = $pdo_legacy->query("SELECT number, description, price, pictureURL FROM parts;");
         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $row) {
-          echo "<input type='submit' name='order_selection' value="" <div class='mySlides fade'>
-                  <div class='numbertext'>" . $row['number'] . "</div>
-                  <img src='" . $row['pictureURL'] . "' style='width:100%'>
-                  <div class='text'>" . $row['description'] ." : " . $row['price'] . "</div>
-                </div></a>";
+          echo "<div class='mySlides fade'>
+                  <div class='numbertext'><p>" . $row['number'] . "</p></div>
+                  <input type='name' name='order_selection' value='" . $row['number'] . "' hidden/>
+                  <input type='image' src='" . $row['pictureURL'] . "' alt='" . $row['decsription'] . "' style='width:100%'/>
+                  <div class='text'><p>" . $row['description'] ." : " . $row['price'] . "</p></div>
+                </div>";
         }
       }
       ?>
