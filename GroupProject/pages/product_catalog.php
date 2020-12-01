@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Product System - Product Catalog</title>
   <!--<link rel="stylesheet" href="../styles.css">-->
+  <link rel="stylesheet" href="slideshow.css"/>
 </head>
 
 <?PHP
@@ -42,7 +43,6 @@
     <h3 class="">Catalog</h3>
     <!-- Slideshow container -->
     <div class="slideshow-container">
-      <link rel="stylesheet" href="slideshow.css"/>
       <form action="order.php" method="GET">
       <!-- Full-width images with number and caption text -->
       <?php
