@@ -1,2 +1,2 @@
-# CSCI466
-Group project for CSCI466
+# CSCI467
+Group project for CSCI467
