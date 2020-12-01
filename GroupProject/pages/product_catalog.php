@@ -72,7 +72,7 @@
       if($connected){
         $rs = $pdo_legacy->query("SELECT number FROM parts;");
         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
-        $count = 0;
+        $count = 1;
         foreach ($rows as $row) {
           echo "<span class='dot' onclick='currentSlide(" . $count .")'></span>";
           $count += 1;
