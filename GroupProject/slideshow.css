@@ -10,12 +10,12 @@ p {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  background-color: black;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
-  background-color: black;
 }
 
 /* Next & previous buttons */
