@@ -55,7 +55,7 @@
           echo "<div class='mySlides fade'>
                   <div class='numbertext'><p>" . $row['number'] . "</p></div>
                   <input type='name' name='order_selection' value='" . $row['number'] . "' hidden/>
-                  <input type='image' src='" . $row['pictureURL'] . "' alt='" . $row['decsription'] . "' style='width:100%'/>
+                  <input type='image' src='" . $row['pictureURL'] . "' alt='" . $row['description'] . "' style='width:100%'/>
                   <div class='text'><p>" . $row['description'] ." : " . $row['price'] . "</p></div>
                 </div>";
         }
