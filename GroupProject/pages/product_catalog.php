@@ -73,7 +73,7 @@
         $rs = $pdo_legacy->query("SELECT number FROM parts;");
         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
         foreach ($rows as $row) {
-          echo "<span class='dot' onclick='currentslide(" . $row['number'] .")'></span>";
+          echo "<span class='dot' onclick='currentSlide(" . $row['number'] .")'></span>";
         }
       }
       ?>
