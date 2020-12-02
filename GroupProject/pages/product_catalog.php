@@ -113,7 +113,7 @@ function showSlides(n) {
       slides[i].style.display = "none";
   }
   for (i = 0; i < items.length; i++) {
-      items[i].addEventListener("click", currentSlide(slideIndex-1));
+      items[i].addEventListener("click", currentslide(slideIndex-1));
   }
   slides[slideIndex-1].style.display = "block";
 }
