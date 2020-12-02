@@ -49,11 +49,11 @@
       if($connected){
         $rs = $pdo_legacy->query("SELECT number, description, price, pictureURL FROM parts;");
         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+        $name = "";
         foreach ($rows as $row) {
           echo "<div class='mySlides fade'>
                   <div class='numbertext'><p>" . $row['number'] . "</p></div>
-                  <input type='name' name='order_selection' value='" . $row['number'] . "' hidden/>
-                  <input type='image' src='" . $row['pictureURL'] . "' alt='" . $row['description'] . "' style='width:100%'/>
+                  <input type='image' value='" . $row['number'] . "' src='" . $row['pictureURL'] . "' alt='" . $row['description'] . "' style='width:100%'/>
                   <div class='text'><p>" . $row['description'] ." : " . $row['price'] . "</p></div>
                 </div>";
         }
