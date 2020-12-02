@@ -73,8 +73,9 @@
         <select id="order_selection" name="order_selection">
       <?php
       if($connected){
+        $count = 1;
         foreach ($rows as $row) {
-          echo "<option value='" . $row['description'] . "'>" . $row['description'] . "</option>";
+          echo "<option onclick='currentSlide(" . $count . ")' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
         }
       }
       ?>
