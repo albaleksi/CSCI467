@@ -75,7 +75,7 @@
       if($connected){
         $count = 1;
         foreach ($rows as $row) {
-          echo "<option class='item' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
+          echo "<option class='item' onclick='event.stopImmediatePropagation()' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
           $count += 1;
         }
       }
@@ -112,9 +112,9 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < items.length; i++) {
+  /*for (i = 0; i < items.length; i++) {
       items[i].addEventListener("dblclick", currentSlide(slideIndex-1));
-  }
+  }*/
   slides[slideIndex-1].style.display = "block";
 }
 </script>
