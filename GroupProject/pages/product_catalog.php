@@ -43,7 +43,7 @@
     <h3 class="">Catalog</h3>
     <!-- Slideshow container -->
     <div class="slideshow-container">
-      <form action="order.php" method="GET">
+      <form action="./order.php" method="GET">
       <!-- Full-width images with number and caption text -->
       <?php
       if($connected){
@@ -81,19 +81,22 @@
       ?>
     </div>
     <div style="text-align:center">
-      <ul>
+      <form action="./order.php" method="GET">
+        <label for="order_selection">Part:</label>
+        <select id="order_selection" name="order_selection">
       <?php
       if($connected){
         $rs = $pdo_legacy->query("SELECT number FROM parts;");
         $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($rows as $row) {
-          echo "<li>" . $row['description'] . "</li>";
+          echo "<option value='" . $row['description'] . "'>" . $row['description'] . "</option>";
           $count += 1;
         }
       }
       ?>
-    </ul>
+    </select>
+  </form>
     </div>
   </main>
 </body>
