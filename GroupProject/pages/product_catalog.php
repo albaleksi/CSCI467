@@ -70,12 +70,12 @@
     <div style="text-align:center">
       <form action="./order.php" method="GET">
         <label for="order_selection">Part:</label>
-        <select id="order_selection" name="order_selection">
+        <select id="order_selection" name="order_selection" onclick="event.stopImmediatePropagation()">
       <?php
       if($connected){
         $count = 1;
         foreach ($rows as $row) {
-          echo "<option class='item' onclick='event.stopImmediatePropagation()' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
+          echo "<option class='item' onclick='currentSlide(" . $count . ")' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
           $count += 1;
         }
       }
@@ -112,9 +112,6 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  /*for (i = 0; i < items.length; i++) {
-      items[i].addEventListener("dblclick", currentSlide(slideIndex-1));
-  }*/
   slides[slideIndex-1].style.display = "block";
 }
 </script>
