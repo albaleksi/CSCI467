@@ -73,9 +73,6 @@
         <select id="order_selection" name="order_selection">
       <?php
       if($connected){
-        $rs = $pdo_legacy->query("SELECT number FROM parts;");
-        $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
-
         foreach ($rows as $row) {
           echo "<option value='" . $row['description'] . "'>" . $row['description'] . "</option>";
         }
