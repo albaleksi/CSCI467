@@ -75,7 +75,8 @@
       if($connected){
         $count = 1;
         foreach ($rows as $row) {
-          echo "<option onclick='currentSlide(" . $count . ")' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
+          echo "<option class='item' value='" . $row['description'] . "'>" . $row['description'] . "</option>";
+          $count += 1;
         }
       }
       ?>
@@ -105,17 +106,16 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var items = document.getElementsByClassName("item");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < items.length; i++) {
+      dots[i].addEventListener("click", currentSlide(slideIndex-1));
   }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
 </script>
 </html>
