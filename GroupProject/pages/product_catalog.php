@@ -112,9 +112,9 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  /*for (i = 0; i < items.length; i++) {
-      dots[i].addEventListener("click", currentSlide(slideIndex-1));
-  }*/
+  for (i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", currentSlide(slideIndex-1));
+  }
   slides[slideIndex-1].style.display = "block";
 }
 </script>
