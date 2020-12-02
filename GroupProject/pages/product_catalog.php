@@ -68,19 +68,6 @@
 
     <!-- The dots/circles -->
     <div style="text-align:center">
-      <?php
-      if($connected){
-        $rs = $pdo_legacy->query("SELECT number FROM parts;");
-        $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
-        $count = 1;
-        foreach ($rows as $row) {
-          echo "<span class='dot' onclick='currentSlide(" . $count .")'></span>";
-          $count += 1;
-        }
-      }
-      ?>
-    </div>
-    <div style="text-align:center">
       <form action="./order.php" method="GET">
         <label for="order_selection">Part:</label>
         <select id="order_selection" name="order_selection">
