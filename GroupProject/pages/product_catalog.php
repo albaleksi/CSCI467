@@ -80,6 +80,21 @@
       }
       ?>
     </div>
+    <div style="text-align:center">
+      <ul>
+      <?php
+      if($connected){
+        $rs = $pdo_legacy->query("SELECT number FROM parts;");
+        $rows = $rs->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($rows as $row) {
+          echo "<li>" . $row['description'] . "</li>";
+          $count += 1;
+        }
+      }
+      ?>
+    </ul>
+    </div>
   </main>
 </body>
 
