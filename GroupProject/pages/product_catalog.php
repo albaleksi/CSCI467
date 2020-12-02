@@ -78,7 +78,6 @@
 
         foreach ($rows as $row) {
           echo "<option value='" . $row['description'] . "'>" . $row['description'] . "</option>";
-          $count += 1;
         }
       }
       ?>
